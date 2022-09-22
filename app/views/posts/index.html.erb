@@ -1,2 +1,9 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<h1 id="main-title">Fancy anything? 🤩</h1>
+
+      <% @posts.each do |post| %>
+        <%= link_to post_path(post) do %>
+            <h2><%= post.title %></h2>
+            <p class="text-ellipsis--2 p-0"><%= post.content %></p>
+        <% end %>
+      <% end %>

@@ -1,2 +1,16 @@
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
+<%= link_to "Back to all posts", posts_path %>
+
+<p><strong>Comments</strong></p>
+<ul class="list-group">
+  <% @post.comments.each do |comment| %>
+    <li class="list-group-item"><%= comment.content %></li>
+  <% end %>
+</ul>
+
+<p><strong>Add a comment</strong></p>
+<%= simple_form_for (@comment) do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
