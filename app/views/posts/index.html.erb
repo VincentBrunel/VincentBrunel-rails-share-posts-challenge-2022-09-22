@@ -1,7 +1,7 @@
 <div class = "index_post_container">
   <h1>All our posts </h1>
   <% @posts.each do |post| %>
-    <%= link_to post_path(post) do %>
+    <%= link_to post_path(post), class: "button-post-index" do %>
       <div class = "post_card">
         <h2><%= post.title %></h2>
         <p class="text-ellipsis--2 p-0"><%= post.content %></p>
