@@ -1,5 +1,7 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+<p><%= link_to "link to post", @post.url %></p>
+
 <%= link_to "Back to all posts", posts_path %>
 
 <p><strong>Comments</strong></p>
@@ -10,7 +12,7 @@
 </ul>
 
 <p><strong>Add a comment</strong></p>
-<%= simple_form_for (@comment) do |f| %>
-  <%= f.input :content %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
+<%#= simple_form_for (@comment) do |f| %>
+  <%#= f.input :content %>
+  <%#= f.submit "Submit review", class: "btn btn-primary" %>
+<%# end %>
